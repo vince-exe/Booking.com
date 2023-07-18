@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: rgb(10, 30, 48);
+}
+
+.login-main-nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(14, 40, 63);
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-bottom: 4px solid rgb(4, 16, 27);;
+}
+
+.login-main-nav-bar h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 45px;
+    color: rgb(197, 197, 197);
+}
+
+.link-div {
+    list-style-type: none;
+}
+
+.single-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+}
+
+.single-link a {
+    color: rgb(197, 197, 197);
+    text-decoration: none;
+}
+
+.single-link:hover {
+    font-size: 28px;
+}
+
+.form-box {
+    display: flex; 
+    flex-direction: column;  
+    align-items: center; 
+    justify-content: center;
+    width: 300px;
+    margin-top: 80px;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(14, 40, 63);
+    width: 500px;
+    border-radius: 12px;
+    border: 4px solid rgb(4, 16, 27);;
+}
+
+.data-box {
+    font-size: 15px;
+    height: 35px;
+    outline: none;
+    padding-left: 6px;
+    color: rgb(17, 17, 17);
+    font-weight: 500;
+    width: 300px;
+    margin: auto;
+    background-color: rgb(214, 214, 214);
+    border: none;
+}
+
+#error-msg {
+    display: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgb(202, 68, 68);
+}
+
+#registration-btn {
+    width: 130px;
+    font-size: 17px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(17, 17, 17);
+    background-color: rgb(214, 214, 214);
+    border: none;
+}
+
+#firstname-box {
+    margin-top: 70px;
+}
+
+#registration-btn {
+    margin-bottom: 60px;
+}
+
+#registration-btn:hover {
+    background-color: rgb(189, 189, 189);
+}
