@@ -30,7 +30,7 @@ html {
 .link-div {
     list-style-type: none;
     display: flex;
-    width: 45%;
+    width: 60%;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -56,29 +56,35 @@ table {
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 70px;
+  margin-top: 80px;
+  margin-bottom: 70px;
 }
 
 th {
-    text-align: left;
-    padding: 8px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 30px;  
-    color: rgb(188, 188, 188);
+  text-align: left;
+  padding: 8px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;  
+  color: rgb(188, 188, 188);
 }
 
 td {
-    padding: 20px;
-    padding-top: 22px;
-    padding-bottom: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+  padding: 20px;
+  padding-top: 22px;
+  padding-bottom: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
-.td-text {
+.td-text a{
+    text-decoration: none;
     font-family: 'Oswald', sans-serif;
     font-size: 20px; 
     color: rgb(188, 188, 188);
+}
+
+.td-text:hover {
+  cursor: pointer;
 }
 
 .actions {

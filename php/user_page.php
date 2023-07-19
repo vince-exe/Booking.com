@@ -18,8 +18,9 @@
     <nav class="login-main-nav-bar">
         <h1>Booking.com</h1>
         <ul class="link-div">
-            <li class="single-link"><a href="../index.html">Logout</a></li>
-            <li class="single-link"><a href="../index.html">About Me</a></li>
+            <li class="single-link"><a href="#">Logout</a></li>
+            <li class="single-link"><a href="#">About Me</a></li>
+            <li class="single-link"><a href="../index.php">HomePage</a></li>
         </ul>
     </nav>
     <div class="welcome-div">
@@ -27,7 +28,7 @@
         <h3>Grazie per aver scelto il nostro sito, che aspetti? Prenota il tuo hotel!</h3>
     </div> 
     <div class="buttons-div">
-        <a href="./book.php"><button id="bookBtn" class="button">Prenota</button></a>
+        <a href="./booking.php"><button id="bookBtn" class="button">Prenota</button></a>
         <a href="./view_bookings.php"><button id="bookingsBtn" class="button">Prenotazioni</button></a>
     </div> 
 </body>

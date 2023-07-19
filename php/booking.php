@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/book.css">
+    <link rel="stylesheet" href="../css/booking.css">
     <title>Book</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
             <li class="single-link"><a href="./user_page.php">HomePage</a></li>
         </ul>
     </nav>
-    <form class="form-box" action="book.php" method="post">
+    <form class="form-box" action="booking.php" method="post">
         <input id="hotel-name-box" class="data-box" type="text" placeholder="Hotel" maxlength="30" name="hotel_name" required="true">
         <input id="number-box" class="data-box" type="number" name="people" max="10" min="1" placeholder="1"> 
         <input id="date-box" class="data-box" type="date" name="book_date" required="true">
