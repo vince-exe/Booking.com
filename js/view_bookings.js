@@ -11,9 +11,9 @@ function setCookie(name, value, expirationDays) {
 fetch('../php_scripts/get_bookings.php')
     .then(response => response.json()).then(data => {
         if (data.status === "fail") {
-            alert("FAIL");
+            alert("An error occurred while comunicating with the server");
         } else if (data.status === "empty") {
-            alert("EMPTY");
+            alert("Non hai nessuna prenotazione al momento.");
         } else {
             let array = data.data;
             for (let i = 0; i < array.length; i++) {
@@ -55,12 +55,13 @@ fetch('../php_scripts/get_bookings.php')
 
                 /* update the booking */
                 anchorTagUpdate.addEventListener('click', e => {
-
+                    setCookie('hotelId', array[i].id, 1);
+                    document.location.href = "../php/update_booking.php";
                 });
 
                 /* remove the booking */
                 anchorTagRemove.addEventListener('click', e => {
-
+                    
                 })
 
                 div3.appendChild(anchorTagUpdate);

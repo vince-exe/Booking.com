@@ -118,6 +118,12 @@ td {
   padding: 8px 0;
   color: #333;
   text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+.dropdown-content a:hover {
+  color: black;
+  font-size: 20px;
 }
 
 .dropdown:hover .dropdown-content {

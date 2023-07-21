@@ -28,10 +28,11 @@ html {
 }
 
 .link-div {
-    width: 40%;
-    display: flex;
-    justify-content: space-around;
     list-style-type: none;
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .single-link {
@@ -49,34 +50,24 @@ html {
 }
 
 .form-box {
-    display: flex; 
-    flex-direction: column;  
-    align-items: center; 
-    justify-content: center;
-    width: 300px;
-    margin-top: 110px;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 140px;
+    width: 450px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
     background-color: rgb(14, 40, 63);
     width: 500px;
     border-radius: 12px;
     border: 4px solid rgb(4, 16, 27);
-}
-
-.form-box h4 {
-    font-family: 'Oswald', sans-serif;
-    color: rgb(150, 150, 150);
-    letter-spacing: 0.5px;
-}
-
-.form-box a {
-    font-family: 'Oswald', sans-serif;
-    color: rgb(150, 150, 150);
-    letter-spacing: 0.5px;
+    text-align: center;
 }
 
 .data-box {
+    text-align: center;
     font-size: 15px;
     height: 35px;
     outline: none;
@@ -89,33 +80,40 @@ html {
     border: none;
 }
 
-#login-btn {
+#hotel-name-box {
+    margin-top: 35px;
+}
+
+#update-btn {
     width: 130px;
     font-size: 17px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin: auto;
+    margin-bottom: 40px;
     font-family: 'Oswald', sans-serif;
     color: rgb(17, 17, 17);
     background-color: rgb(214, 214, 214);
     border: none;
 }
 
-#login-btn:hover {
+#update-btn:hover {
     background-color: rgb(189, 189, 189);
 }
 
+.error-div {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
 #error-msg {
+    text-align: center;
+    margin: auto;
     display: none;
     font-weight: 600;
     font-size: 16px;
     color: rgb(202, 68, 68);
-}
-
-#email-box {
-    margin-top: 75px;
-}
-
-#login-btn {
-    margin-bottom: 75px;
 }

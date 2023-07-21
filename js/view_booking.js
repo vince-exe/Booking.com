@@ -23,28 +23,34 @@ function getCookie(name) {
     return null; // Il cookie non è stato trovato
 }
 
+function deleteCookie(name) {
+    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
 if (getCookie("hotelId") == null) {
     alert("Selezionare una prenotazione valida!");
 }
 
 fetch("../php_scripts/get_booking.php")
-.then(response => {
-    response.json().then(data => {
-        if (data.status == "false") {
-            alert(data.message);
-        }
-        else {
-            let obj = data.array[0];
-            hotelNameBox.placeholder = obj.hotel_name;
-            numberBox.placeholder = obj.people;
+    .then(response => {
+        response.json().then(data => {
+            if (data.status == "false") {
+                alert(data.message);
+            }
+            else {
+                let obj = data.array[0];
+                hotelNameBox.placeholder = obj.hotel_name;
+                numberBox.placeholder = obj.people;
 
-            let arr = obj.book_date.split('-');
-            dateBox.placeholder = arr[2] + "-" + arr[1] + "-" + arr[0];
-        }
-        
+                let arr = obj.book_date.split('-');
+                dateBox.placeholder = arr[2] + "-" + arr[1] + "-" + arr[0];
+
+                deleteCookie('hotelId');
+            }
+
+        })
     })
-})
-.catch(reason => {
-    alert(reason);
-    console.error(reason);
-})
+    .catch(reason => {
+        alert("Errore durante la comunicazione con il server");
+        console.error(reason);
+    })
