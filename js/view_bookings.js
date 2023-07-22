@@ -93,7 +93,29 @@ fetch('../php_scripts/get_bookings.php')
     })
 
 confirmButton.addEventListener('click', () => {
-    setCookie('hotelId', array[hotelIndex].id, 1);
+    fetch('../php_scripts/delete_booking.php', {
+        method: 'post',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ hotel_id: array[hotelIndex].id })
+    })
+    .then(response => {
+        response.json().then(data => {
+            if(data.status == "true") {
+                banner.style.display = 'none';
+                window.location.reload();
+            }
+            else {
+                if(data.message = "") {
+                    alert("Errore durante la comunicazione con il server")
+                }
+                else {
+                    alert(data.message);
+                }
+            }
+        })
+    })
 });
 
 cancelButton.addEventListener('click', () => {

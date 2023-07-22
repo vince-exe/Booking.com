@@ -32,9 +32,7 @@
     <div id="banner" class="banner">
         <p class="first-p-banner">Sei sicuro di voler eliminare la prenotazione?</p>
         <div class="buttons-div-banner">
-            <form method="delete" action="./view_bookings.php">
-                <button id="confirmButton" class="banner-button">Conferma</button>
-            </form>
+            <button id="confirmButton" class="banner-button">Conferma</button>
             <button id="cancelButton" class="banner-button">Annulla</button>
         </div>
     </div>
