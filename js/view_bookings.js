@@ -1,4 +1,7 @@
 const bookingsTable = document.getElementById("bookings-table");
+const banner = document.getElementById('banner');
+const confirmButton = document.getElementById('confirmButton');
+const cancelButton = document.getElementById('cancelButton');
 
 function setCookie(name, value, expirationDays) {
     const expirationDate = new Date();
@@ -6,6 +9,9 @@ function setCookie(name, value, expirationDays) {
     const expires = "expires=" + expirationDate.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
+
+var array;
+var hotelIndex;
 
 /* get the hotel id and name */
 fetch('../php_scripts/get_bookings.php')
@@ -15,7 +21,7 @@ fetch('../php_scripts/get_bookings.php')
         } else if (data.status === "empty") {
             alert("Non hai nessuna prenotazione al momento.");
         } else {
-            let array = data.data;
+            array = data.data;
             for (let i = 0; i < array.length; i++) {
                 let tr = document.createElement('tr');
 
@@ -49,7 +55,7 @@ fetch('../php_scripts/get_bookings.php')
 
                 /* view the book */
                 titleTd1.addEventListener('click', e => {
-                    setCookie('hotelId', array[i].id ,1);
+                    setCookie('hotelId', array[i].id, 1);
                     document.location.href = "../php/view_booking.php";
                 });
 
@@ -61,7 +67,8 @@ fetch('../php_scripts/get_bookings.php')
 
                 /* remove the booking */
                 anchorTagRemove.addEventListener('click', e => {
-                    
+                    banner.style.display = 'flex';
+                    hotelIndex = i;
                 })
 
                 div3.appendChild(anchorTagUpdate);
@@ -84,3 +91,11 @@ fetch('../php_scripts/get_bookings.php')
         alert("Si è verificato un errore durante la comunicazione con il server.");
         console.error(error);
     })
+
+confirmButton.addEventListener('click', () => {
+    setCookie('hotelId', array[hotelIndex].id, 1);
+});
+
+cancelButton.addEventListener('click', () => {
+    banner.style.display = 'none';
+});

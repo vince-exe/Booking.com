@@ -18,7 +18,7 @@
     <nav class="login-main-nav-bar">
         <h1>Booking.com</h1>
         <ul class="link-div">
-            <li class="single-link"><a href="./user_page.php">HomePage</a></li>
+            <li class="single-link"><a href="./user_page.php">Prenotazioni</a></li>
         </ul>
     </nav>
     <form class="form-box" action="booking.php" method="post">
@@ -72,7 +72,7 @@
                 <script type="text/JavaScript"> 
                     document.getElementById("error-msg").style.display = "block";
                     document.getElementById("error-msg").style.color = "green";
-                    document.getElementById("error-msg").innerHTML = "Prenotazione effettuata con successo!! <br><br> Vai alla HomePage per visualizzare le tue prenotazioni";
+                    document.getElementById("error-msg").innerHTML = "Prenotazione effettuata con successo!!";
                 </script>
             ';
         }

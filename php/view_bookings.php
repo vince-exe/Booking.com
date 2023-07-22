@@ -29,6 +29,15 @@
             <th>Prenotazioni</th>
         </tr>
     </table>
+    <div id="banner" class="banner">
+        <p class="first-p-banner">Sei sicuro di voler eliminare la prenotazione?</p>
+        <div class="buttons-div-banner">
+            <form method="delete" action="./view_bookings.php">
+                <button id="confirmButton" class="banner-button">Conferma</button>
+            </form>
+            <button id="cancelButton" class="banner-button">Annulla</button>
+        </div>
+    </div>
     <script src="../js/view_bookings.js"></script>
 </body>
 </html>
