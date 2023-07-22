@@ -18,10 +18,9 @@
     <nav class="login-main-nav-bar">
         <h1>Booking.com</h1>
         <ul class="link-div">
-            <li class="single-link"><a href="../index.html">Logout</a></li>
-            <li class="single-link"><a href="../index.html">About Me</a></li>
+            <li class="single-link"><a href="../php_scripts/logout.php">Logout</a></li>
+            <li class="single-link"><a href="./about_me.php">About Me</a></li>
             <li class="single-link"><a href="./user_page.php">Prenota</a></li>
-            <li class="single-link"><a href="../index.php">HomePage</a></li>
         </ul>
     </nav>
     <table id="bookings-table">

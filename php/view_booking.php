@@ -19,8 +19,8 @@
         <h1>Booking.com</h1>
         <ul class="link-div">
             <li class="single-link"><a href="./view_bookings.php">Prenotazioni</a></li>
-            <li class="single-link"><a href="#">Logout</a></li>
-            <li class="single-link"><a href="#">About Me</a></li>
+            <li class="single-link"><a href="../php_scripts/logout.php">Logout</a></li>
+            <li class="single-link"><a href="./about_me.php">About Me</a></li>
         </ul>
     </nav>
     <div class="form-box">

@@ -18,9 +18,8 @@
     <nav class="login-main-nav-bar">
         <h1>Booking.com</h1>
         <ul class="link-div">
-            <li class="single-link"><a href="#">Logout</a></li>
-            <li class="single-link"><a href="#">About Me</a></li>
-            <li class="single-link"><a href="../index.php">HomePage</a></li>
+            <li class="single-link"><a href="../php_scripts/logout.php">Logout</a></li>
+            <li class="single-link"><a href="./about_me.php">About Me</a></li>
         </ul>
     </nav>
     <div class="welcome-div">
